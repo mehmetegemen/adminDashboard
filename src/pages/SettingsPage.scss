@@ -1,0 +1,9 @@
+@import "../master.scss";
+
+.settings-page {
+  padding: 10px;
+  &__title {
+    text-align: center;
+    color: $darkerGray;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../master.scss";
+
+.reports {
+  padding: 50px;
+  h1 {
+    text-align: center;
+    color: $darkerGray;
+    margin: 0 0 50px 0;
+  }
+  &__projects {
+    margin: 120px 0 0 0;
+  }
+}

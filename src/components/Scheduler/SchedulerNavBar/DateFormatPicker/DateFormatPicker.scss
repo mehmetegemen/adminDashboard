@@ -1,0 +1,18 @@
+@import "../../../../master.scss";
+
+.date-format-picker {
+  display: flex;
+  button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 10px;
+    transition: all 0.5s ease;
+  }
+  button.active {
+    background: $lightBlue;
+    color: white;
+  }
+}

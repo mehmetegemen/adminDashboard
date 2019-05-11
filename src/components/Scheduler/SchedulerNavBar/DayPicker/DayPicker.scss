@@ -1,0 +1,21 @@
+@import "../../../../master.scss";
+
+.day-picker {
+  display: flex;
+  &__back, &__forward {
+    border: 1px solid $lightBlue;
+    color: $lightBlue;
+    background: white;
+    width:32px;
+    height:32px;
+    margin: auto 0;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      background: $lightBlue;
+    }
+  }
+  h3 {
+    margin: 0 20px;
+  }
+}

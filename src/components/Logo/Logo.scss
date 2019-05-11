@@ -1,0 +1,22 @@
+@import "../../master.scss";
+
+.dashboard-name {
+  text-align: center;
+  color: $gray;
+  margin: 20px 0 50px 0;
+  font-weight: 300;
+  transition: color 1s ease;
+  &:hover {
+    color: $red;
+  }
+}
+.logo {
+  display: block;
+  text-align: center;
+  font-size: 72px;
+  color: $gray;
+  transition: color 1s ease;
+  &:hover {
+    color: $red;
+  }
+}

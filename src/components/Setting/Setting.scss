@@ -1,0 +1,17 @@
+@import "../../master.scss";
+
+.setting {
+  display: flex;
+  border-bottom: 1px solid $lightGray;
+  margin-top:10px;
+  padding: 20px;
+  &__content {
+    width: calc(100% - 100px);
+    margin: auto 0;
+    padding-right: 10%;
+  }
+  &__switch {
+    width: 100px;
+    margin-bottom: auto;
+  }
+}

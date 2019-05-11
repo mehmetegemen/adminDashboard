@@ -1,0 +1,11 @@
+@import "../../master.scss";
+
+.side-menu {
+  margin-top: 60px;
+  padding-top: 50px;
+  height: 100%;
+  width: $sideMenuWidth;
+  background: $darkBlue;
+  position: fixed;
+  top: -60px;
+}

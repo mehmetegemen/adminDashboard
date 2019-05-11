@@ -1,0 +1,19 @@
+@import "../../master.scss";
+
+.side-lined-heading {
+  color: $gray;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 1em -1em;
+
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+    background: $lightGray;
+    height: 1px;
+    margin: 0 1em;
+  }
+}
