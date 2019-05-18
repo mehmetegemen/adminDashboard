@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import SideMenu from "./components/SideMenu/SideMenu";
 import TopBar from "./components/TopBar/TopBar";
 import CalendarPage from "./pages/CalendarPage";
