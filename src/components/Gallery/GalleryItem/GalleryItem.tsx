@@ -1,3 +1,5 @@
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 import React, { FunctionComponent, useRef, useState } from "react";
 
@@ -85,7 +87,7 @@ const GalleryItem: FunctionComponent<{
               title="Delete image"
               onClick={deleteItem}
             >
-              <i className="far fa-trash-alt" />
+              <FontAwesomeIcon icon={faTrashAlt} />
             </button>
             <button
               className="gallery-item__content__top__controls__edit"
@@ -93,7 +95,7 @@ const GalleryItem: FunctionComponent<{
               title="Edit image"
               onClick={toggleTitleChange}
             >
-              <i className="far fa-edit" />
+              <FontAwesomeIcon icon={faEdit} />
             </button>
           </div>
         </div>

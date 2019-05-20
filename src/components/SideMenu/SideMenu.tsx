@@ -8,12 +8,12 @@ const SideMenu: FunctionComponent = () => {
   return (
     <div className="side-menu">
       <Logo />
-      <SideMenuLink to="/" icon="fa-home">Home</SideMenuLink>
-      <SideMenuLink to="/reports" icon="fa-file-signature">Reports</SideMenuLink>
-      <SideMenuLink to="/analytics" icon="fa-chart-area">Analytics</SideMenuLink>
-      <SideMenuLink to="/calendar" icon="fa-calendar">Calendar</SideMenuLink>
-      <SideMenuLink to="/gallery" icon="fa-images">Gallery</SideMenuLink>
-      <SideMenuLink to="/settings" icon="fa-cog">Settings</SideMenuLink>
+      <SideMenuLink to="/" icon="home">Home</SideMenuLink>
+      <SideMenuLink to="/reports" icon="file-signature">Reports</SideMenuLink>
+      <SideMenuLink to="/analytics" icon="chart-area">Analytics</SideMenuLink>
+      <SideMenuLink to="/calendar" icon="calendar">Calendar</SideMenuLink>
+      <SideMenuLink to="/gallery" icon="images">Gallery</SideMenuLink>
+      <SideMenuLink to="/settings" icon="cog">Settings</SideMenuLink>
     </div>
   );
 };

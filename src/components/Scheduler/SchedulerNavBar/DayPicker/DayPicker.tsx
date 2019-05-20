@@ -1,3 +1,5 @@
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 import React, { FunctionComponent, useState } from "react";
 import * as schedulerConstants from "../../constants";
@@ -55,14 +57,14 @@ const DayPicker: FunctionComponent<{
         className="day-picker__back"
         onClick={changeDate(false)}
       >
-        <i className="fas fa-angle-left" />
+        <FontAwesomeIcon icon={faAngleLeft} />
       </button>
       <h3>{dateString}</h3>
       <button
         className="day-picker__forward"
         onClick={changeDate(true)}
       >
-      <i className="fas fa-angle-right" />
+      <FontAwesomeIcon icon={faAngleRight} />
       </button>
     </div>
   );

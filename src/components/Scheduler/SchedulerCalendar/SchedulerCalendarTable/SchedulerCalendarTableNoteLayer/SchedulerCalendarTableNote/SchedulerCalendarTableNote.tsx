@@ -1,3 +1,5 @@
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 import React, { FunctionComponent } from "react";
 
@@ -64,7 +66,7 @@ const SchedulerCalendarTableNote: FunctionComponent<{
             title="Delete image"
             onClick={deleteNote(noteId)}
           >
-            <i className="far fa-trash-alt" />
+            <FontAwesomeIcon icon={faTrashAlt} />
           </button>
           <button
             className="scheduler-calendar-table-note__top__controls__edit"
@@ -72,7 +74,7 @@ const SchedulerCalendarTableNote: FunctionComponent<{
             title="Edit image"
             onClick={editNote(noteId)}
           >
-            <i className="far fa-edit" />
+            <FontAwesomeIcon icon={faEdit} />
           </button>
         </div>
       </div>

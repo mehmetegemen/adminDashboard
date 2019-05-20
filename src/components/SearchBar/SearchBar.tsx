@@ -1,3 +1,5 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FunctionComponent } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import getQueryString from "../../utils/getQueryString";
@@ -27,7 +29,7 @@ const SearchBar: FunctionComponent<RouteComponentProps & {
       className="search-bar"
       style={{maxWidth: width}}
     >
-      <i className="fas fa-search" />
+      <FontAwesomeIcon icon={faSearch} />
       <input
         type="text"
         placeholder={placeholder ? placeholder : ""}

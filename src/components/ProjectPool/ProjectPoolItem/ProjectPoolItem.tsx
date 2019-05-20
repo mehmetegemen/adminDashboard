@@ -1,3 +1,5 @@
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FunctionComponent, useState } from "react";
 
 import "./ProjectPoolItem.scss";
@@ -23,10 +25,9 @@ const ProjectPoolItem: FunctionComponent<{
       onMouseLeave={handleHover}
       style={{borderColor: hoverToggle ? iconColor ? iconColor : "#1071E2" : "#EEE"}}
     >
-      <i
-        className="far fa-copy"
-        aria-hidden="true"
-        style={{color: iconColor ? iconColor : "#1071E2"}}
+      <FontAwesomeIcon
+        icon={faCopy}
+        style={{color: iconColor ? iconColor : "#1071E2", "font-size": "42px"}}
       />
       <h3>{projectName}</h3>
       <p>{projectDescription}</p>
