@@ -1,4 +1,4 @@
-import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FunctionComponent, useState } from "react";
 
