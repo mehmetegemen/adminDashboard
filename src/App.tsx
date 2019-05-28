@@ -7,6 +7,7 @@ import GalleryPage from "./pages/GalleryPage";
 import HomePage from "./pages/HomePage";
 import ReportsPage from "./pages/ReportsPage";
 import SettingsPage from "./pages/SettingsPage";
+import AnalyticsPage from "./pages/AnalyticsPage";
 
 import "./App.scss";
 
@@ -27,6 +28,7 @@ const App: FunctionComponent = () => {
             <Route exact={true} path="/gallery" component={GalleryPage} />
             <Route exact={true} path="/calendar" component={CalendarPage} />
             <Route exact={true} path="/settings" component={SettingsPage} />
+            <Route exact={true} path="/analytics" component={AnalyticsPage} />
           </Switch>
         </main>
       </Router>
