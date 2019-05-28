@@ -1,0 +1,15 @@
+@import "../../master.scss";
+
+.line-chart {
+  width: 100%;
+  &__line {
+    fill: none;
+    stroke: $lightBlue;
+    stroke-width: 3px;
+  }
+
+  &__dot {
+    fill: $lightBlue;
+    stroke: white;
+  }
+}
