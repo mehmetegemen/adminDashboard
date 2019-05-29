@@ -95,6 +95,11 @@ const SchedulerCalendarTable: FunctionComponent<{
       editedNoteId: id,
       justEdited: true,
     });
+    setTimeout(() => {
+      editPanel.current.style.top = tableRef.current.scrollTop + "px";
+    }, 1);
+    tableRef.current.style.overflowY = "hidden";
+    tableRef.current.style.width = "100%";
   };
   const cancelEditNote = () => {
     tableRef.current.style.overflowY = "scroll";
