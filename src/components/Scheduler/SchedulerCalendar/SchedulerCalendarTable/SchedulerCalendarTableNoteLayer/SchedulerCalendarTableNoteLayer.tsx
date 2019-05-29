@@ -198,6 +198,7 @@ const SchedulerCalendarTableNoteLayer: FunctionComponent<{
     // at the bottom of the grid. Otherwise mouseUp is not triggered
     // because Math.floor() requires to be on below cell.
     height: 48 * 51 + 50 + "px",
+    cursor: "s-resize",
   };
   return (
     <div
