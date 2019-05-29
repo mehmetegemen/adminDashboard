@@ -20,6 +20,7 @@ const QuarterSelection: FunctionComponent<{
           data={data[i]}
           currency="$"
           quarter={i + 1}
+          key={i}
         />
       ))}
     </div>
