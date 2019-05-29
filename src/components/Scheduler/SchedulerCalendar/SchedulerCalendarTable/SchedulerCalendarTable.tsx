@@ -75,6 +75,7 @@ const SchedulerCalendarTable: FunctionComponent<{
 }> = (props) => {
   const [state, setState] = useState({
     editedNoteId: 0,
+    justEdited: false,
     notes: deepCopy(notes),
   });
   const tableRef = useRef((null as unknown) as HTMLDivElement);
@@ -92,19 +93,28 @@ const SchedulerCalendarTable: FunctionComponent<{
     setState({
       ...state,
       editedNoteId: id,
+      justEdited: true,
     });
   };
   const cancelEditNote = () => {
     tableRef.current.style.overflowY = "scroll";
     tableRef.current.style.width = "calc(100% + 17px)";
-    const newState = deepCopy(state.notes);
-    const newId = newState[newState.length - 1].id + 1;
-    newState.pop();
-    setState({
-      ...state,
-      editedNoteId: 0,
-      notes: newState,
-    });
+    if (state.justEdited) {
+      setState({
+        ...state,
+        editedNoteId: 0,
+        justEdited: false,
+      })
+    } else {
+      const newState = deepCopy(state.notes);
+      const newId = newState[newState.length - 1].id + 1;
+      newState.pop();
+      setState({
+        ...state,
+        editedNoteId: 0,
+        notes: newState,
+      });
+    }
   };
   const saveEditNote = (
     id: number,
@@ -133,6 +143,7 @@ const SchedulerCalendarTable: FunctionComponent<{
     setState({
       ...state,
       editedNoteId: newId,
+      justEdited: false,
       notes: newState,
     });
   };
