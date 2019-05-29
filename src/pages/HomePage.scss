@@ -1,5 +1,26 @@
 @import "../master.scss";
 
 .home-page {
-  padding: 10px;
+  padding: 20%;
+  u {
+    text-decoration: none;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 204, 255, 0) 0%,
+      rgba(0, 201, 255, 0) 69%,
+      rgba(0, 201, 255, 1) 69%,
+      rgba(0, 200, 255, 1) 100%
+    );
+  }
+  ul {
+    list-style: none;
+  }
+  
+  ul li:before {
+    content: '✓';
+    color:$green;
+    font-weight: bold;
+    position: relative;
+    left: -10px;
+  }
 }
