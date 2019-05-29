@@ -1,0 +1,55 @@
+@import "../../../master.scss";
+
+// .quarter-selection-button {
+//   background:transparent;
+//   border: 2px solid $gray;
+//   margin: 10px;
+//   width: 240px;
+//   height: 150px;
+//   &__top {
+//     display: flex;
+//     &__quarter {
+//       font-size: 72px;
+//       color: $lightBlue;
+//     }
+//     &__months {
+//       font-size: 20px;
+//       width: calc(100% - 12px - 97px);
+//       text-align: right;
+//     }
+//   }
+//   &__total {
+//     font-size: 40px;
+//     background: $green;
+//     color: white;
+//     bottom: 0;
+//   }
+//   &:hover {
+//     background: $lightBlue;
+//     * {
+//       background: $lightBlue;
+//       color: white; 
+//     }
+//     border: 2px solid $lightBlue;
+//     border-bottom: 4px solid $darkBlue;
+//   }
+// }
+
+.quarter-selection-button {
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  border-bottom: 1px solid $lightGray;
+  color: $darkGray;
+  cursor: pointer;
+  &__total {
+    border-left: 4px solid $lightBlue;
+    padding-left: 10px;
+  }
+  &:hover {
+    background: $lightBlue;
+    color: white;
+    border:none;
+  }
+}
