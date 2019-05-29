@@ -19,15 +19,22 @@ const months = [
 ];
 
 const LineChart: FunctionComponent<{
-  data: IQuarter[],
-}> = ({ data }) => {
+  data: IQuarter[];
+  width: number;
+  height: number;
+  margin: {
+    top: number;
+    right: number;
+    bottom: number;
+    left: number;
+  }
+}> = ({ data, width, height, margin }) => {
   const lineChart = useRef((null as unknown) as HTMLDivElement);
   const svg = useRef((null as unknown) as SVGSVGElement);
   const xAxis = useRef((null as unknown) as SVGGElement);
   const yAxis = useRef((null as unknown) as SVGGElement);
   const path = useRef((null as unknown) as SVGPathElement);
   const presentationArea = useRef((null as unknown) as SVGGElement);
-  const margin = { top: 40, right: 40, bottom: 40, left: 40 };
   useEffect(() => {
     drawChart();
   });
@@ -58,7 +65,10 @@ const LineChart: FunctionComponent<{
     ]);
 
     xScale.domain(data.map((d) => d.month));
-    points.exit().transition().remove();
+    points
+      .exit()
+      .transition()
+      .remove();
 
     points
       .enter()
@@ -77,8 +87,12 @@ const LineChart: FunctionComponent<{
       .attr("cx", (d) => xScale(d.month) as number)
       .attr("cy", (d) => yScale(d.balance) as number);
 
-    d3.select(yAxis.current).transition().call(d3.axisLeft(yScale));
-    d3.select(xAxis.current).transition().call(d3.axisBottom(xScale));
+    d3.select(yAxis.current)
+      .transition()
+      .call(d3.axisLeft(yScale));
+    d3.select(xAxis.current)
+      .transition()
+      .call(d3.axisBottom(xScale));
 
     d3.select(path.current)
       .datum(data)
@@ -88,8 +102,8 @@ const LineChart: FunctionComponent<{
   };
 
   const drawChart = () => {
-    const chartWidth = 800;
-    const chartHeight = 250;
+    const chartWidth = width;
+    const chartHeight = height;
     const yScale = d3.scaleLinear().range([chartHeight, 0]);
     const xScale = d3.scalePoint().range([0, chartWidth]);
     d3.select(xAxis.current).attr(
@@ -105,7 +119,13 @@ const LineChart: FunctionComponent<{
   };
   return (
     <div className="line-chart" ref={lineChart}>
-      <svg ref={svg} viewBox="0 0 880 330" preserveAspectRatio="xMinYMin meet">
+      <svg
+        ref={svg}
+        viewBox={`0 0 ${width + margin.right + margin.left} ${height +
+          margin.top +
+          margin.bottom}`}
+        preserveAspectRatio="xMinYMin meet"
+      >
         <g ref={yAxis} />
         <g ref={xAxis} />
         <g
